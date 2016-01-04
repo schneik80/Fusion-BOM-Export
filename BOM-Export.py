@@ -113,7 +113,6 @@ def run(context):
                 super().__init__()
             def notify(self, args):
                 try:
-######
                     command = args.firingEvent.sender
                     global docname
                     global showversion
@@ -210,13 +209,11 @@ def run(context):
                     
                     #confirm save
                     ui.messageBox( 'Document Saved to:\n' + filename, '', 0, 2)    
-                
-######
-                    command = args.firingEvent.sender
-                    ui.messageBox(_('command: {} executed successfully').format(command.parentCommandDefinition.id))
+#                    command = args.firingEvent.sender
+#                    ui.messageBox(_('command: {} executed successfully').format(command.parentCommandDefinition.id))
                 except:
                     if ui:
-                        ui.messageBox(_('command executed failed: {}').format(traceback.format_exc()))
+                       ui.messageBox(_('command executed failed: {}').format(traceback.format_exc()))
 
         class CommandCreatedEventHandlerPanel(adsk.core.CommandCreatedEventHandler):
             def __init__(self):
