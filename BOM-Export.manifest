@@ -1,10 +1,14 @@
 {
-	"autodeskProduct":	"Fusion360",
-	"type":	"script",
-	"author":	"Kevin Schneider",
-	"description":	{
-		"":	""
-	},
-	"supportedOS":	"windows|mac",
-	"editEnabled":	False
+    "autodeskProduct":"Fusion360",
+    "type":"addin",
+    "id":"7069505c-9b82-47db-a7d2-ede72e1d4684",
+    "author":"Kevin Schneider",
+    "description":{
+        "":	"Export a BOM as cvs Files",
+		"1033": "Export a BOM as cvs Files",
+		"2052": "这是一个附加模块的例子。"
+    },
+    "version":"0.0.1",
+    "runOnStartup":True,
+    "supportedOS":"windows|mac"
 }

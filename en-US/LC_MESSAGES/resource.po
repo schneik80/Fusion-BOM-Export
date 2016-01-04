@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2015-08-03 15:59+China Standard Time\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#:
+msgid "commandDefinition id is not specified"
+msgstr "commandDefinition id is not specified"
+
+#:
+msgid "commandControl id is not specified"
+msgstr "commandControl id is not specified"
+
+#:
+msgid "tobeDeleteObj is not a valid object"
+msgstr "tobeDeleteObj is not a valid object"
+
+#:
+msgid "Demo"
+msgstr "Demo"
+
+#:
+msgid "Demo Command"
+msgstr "Demo Command"
+
+#:
+msgid "Input: {} changed event triggered"
+msgstr "Input: {} changed event triggered"
+
+#:
+msgid "Input changed event failed: {}"
+msgstr "Input changed event failed: {}"
+
+#:
+msgid "command: {} executed successfully"
+msgstr "command: {} executed successfully"
+
+#:
+msgid "command executed failed: {}"
+msgstr "command executed failed: {}"
+
+#:
+msgid "Value"
+msgstr "Value"
+
+#:
+msgid "Checked"
+msgstr "Checked"
+
+#:
+msgid "Default value"
+msgstr "Default value"
+
+#:
+msgid "String Value"
+msgstr "String Value"
+
+#:
+msgid "Select one"
+msgstr "Select one"
+
+#:
+msgid "Selection"
+msgstr "Selection"
+
+#:
+msgid "Drop Down"
+msgstr "Drop Down"
+
+#:
+msgid "Drop Down2"
+msgstr "Drop Down2"
+
+#:
+msgid "ListItem 1"
+msgstr "ListItem 1"
+
+#:
+msgid "ListItem 2"
+msgstr "ListItem 2"
+
+#:
+msgid "ListItem 3"
+msgstr "ListItem 3"
+
+#:
+msgid "Slider"
+msgstr "Slider"
+
+#:
+msgid "Button Row"
+msgstr "Button Row"
+
+#:
+msgid "Panel command created successfully"
+msgstr "Panel command created successfully"
+
+#:
+msgid "Panel command created failed: {}"
+msgstr "Panel command created failed: {}"
+
+#:
+msgid "QAT command created successfully"
+msgstr "QAT command created successfully"
+
+#:
+msgid "QAT command created failed: {}"
+msgstr "QAT command created failed: {}"
+
+#:
+msgid "A demo command button is successfully added to the Quick Access Toolbar"
+msgstr "A demo command button is successfully added to the Quick Access Toolbar"
+
+#:
+msgid "A demo command is successfully added to the create panel in modeling workspace"
+msgstr "A demo command is successfully added to the create panel in modeling workspace"
+
+#:
+msgid "AddIn Start Failed: {}"
+msgstr "AddIn Start Failed: {}"
+
+#:
+msgid "AddIn Stop Failed: {}"
+msgstr "AddIn Stop Failed: {}"
