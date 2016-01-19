@@ -98,8 +98,6 @@ def run(context):
     try:
         app = adsk.core.Application.get()
         ui  = app.userInterface
-        design = app.activeProduct
-        docname = app.activeDocument.name
         
         global _;
         _ = getLocStrings();
@@ -120,6 +118,9 @@ def run(context):
                     
                     command = args.firingEvent.sender
                     inputs = command.commandInputs
+                    
+                    design = app.activeProduct
+                    docname = app.activeDocument.name
 
                     for input in inputs:
                         if input.id == 'docname_':
@@ -223,6 +224,9 @@ def run(context):
                     cmd = args.command
                     onExecute = CommandExecuteHandler()
                     cmd.execute.add(onExecute)
+                    global docname
+                    design = app.activeProduct
+                    docname = app.activeDocument.name
 
                     # keep the handler referenced beyond this function
                     handlers.append(onExecute)
@@ -231,8 +235,9 @@ def run(context):
                     commandInputs_.addStringValueInput('docname_', 'Title:', docname ) 
                     #dropDownCommandInput_ = commandInputs_.addDropDownCommandInput('BOMtype_', _('Drop Down'), adsk.core.DropDownStyles.LabeledIconDropDownStyle)
                     #dropDownItems_ = dropDownCommandInput_.listItems
-                    #dropDownItems_.add(_('Flat BOM'), True)
-                    #dropDownItems_.add(_('Nested Bom'), False)
+                    #dropDownItems_.add(_('Parts only'), True)
+                    #dropDownItems_.add(_('Indented Bom'), False)
+                    #dropDownItems_.add(_('Top Level'), False)
                     commandInputs_.addBoolValueInput('showversion_', 'Show Version', True, '', showversion)
                     commandInputs_.addBoolValueInput('showsubs_', 'Show Sub-ASSY', True, '', showsubs)
 
