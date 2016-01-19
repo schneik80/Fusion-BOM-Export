@@ -98,8 +98,6 @@ def run(context):
     try:
         app = adsk.core.Application.get()
         ui  = app.userInterface
-        design = app.activeProduct
-        docname = app.activeDocument.name
         
         global _;
         _ = getLocStrings();
@@ -120,6 +118,9 @@ def run(context):
                     
                     command = args.firingEvent.sender
                     inputs = command.commandInputs
+                    
+                    design = app.activeProduct
+                    docname = app.activeDocument.name
 
                     for input in inputs:
                         if input.id == 'docname_':
@@ -223,6 +224,9 @@ def run(context):
                     cmd = args.command
                     onExecute = CommandExecuteHandler()
                     cmd.execute.add(onExecute)
+                    global docname
+                    design = app.activeProduct
+                    docname = app.activeDocument.name
 
                     # keep the handler referenced beyond this function
                     handlers.append(onExecute)
