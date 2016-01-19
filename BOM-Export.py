@@ -86,11 +86,11 @@ def walkThrough(bom):
     if showsubs == False:
         for item in bom:
             if item['sub'] < 1:
-                mStr += '"' + item['name'] + '","' + str(item['pn']) + '","' + str(item['material']) + '",' + str(item['instances']) + '\n'
+                mStr += '"' + item['name'] + '","' + str(item['pn']) + '","' + str(item['material']) + '",' + str(item['instances']) + ',EA' + '\n'
         return mStr
     if showsubs == True:
         for item in bom:
-            mStr += '"' + item['name'] + '","' + str(item['pn']) + '","' + str(item['material']) + '",' + str(item['instances']) + '\n'
+            mStr += '"' + item['name'] + '","' + str(item['pn']) + '","' + str(item['material']) + '",' + str(item['instances']) + ',EA' + '\n'
         return mStr
 
 def run(context):
@@ -177,16 +177,11 @@ def run(context):
                                 'instances': 1,
                                 'sub': occtype,
                             })
-            
-                    # Display the BOM in the console
-                    print ('\n')
-                    print ('Display Name, ' + 'Part Number, ' + 'Material, '+ 'Count')
-                    print (walkThrough(bom))
                      
                     # Display the BOM in the console
                     print ('\n')
                     print ( docname + ' BOM\n')
-                    print ('Display Name, ' + 'Part Number, ' + 'Material, '+ 'Count')
+                    print ('Display Name, ' + 'Part Number, ' + 'Material, '+ 'Count' + 'UOM')
                     print (walkThrough(bom))
                      
                     # Display the BOM Save Dialog 
@@ -204,7 +199,7 @@ def run(context):
                     #Write the BOM    
                     output = open(filename, 'w')
                     output.writelines( docname + ' BOM\n')
-                    output.writelines('Display Name, ' + 'Part Number, ' + 'Material, '+ 'Count\n')
+                    output.writelines('Display Name, ' + 'Part Number, ' + 'Material, '+ 'Count,' + 'UOM\n')
                     output.writelines(walkThrough(bom))
                     output.close()            
                     
