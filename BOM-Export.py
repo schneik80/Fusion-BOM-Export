@@ -132,7 +132,7 @@ def run(context):
                 
                     # Make sure we have a desing
                     if not design:
-                        ui.messageBox('No active design', 'BOM Export')
+                        ui.messageBox('A Design Must be Active.', 'BOM Export')
                         return
                         
                     # Get all occurrences in the root component of the active design
