@@ -177,12 +177,7 @@ def run(context):
                                 'instances': 1,
                                 'sub': occtype,
                             })
-            
-                    # Display the BOM in the console
-                    print ('\n')
-                    print ('Display Name, ' + 'Part Number, ' + 'Material, '+ 'Count')
-                    print (walkThrough(bom))
-                     
+
                     # Display the BOM in the console
                     print ('\n')
                     print ( docname + ' BOM\n')
@@ -204,7 +199,7 @@ def run(context):
                     #Write the BOM    
                     output = open(filename, 'w')
                     output.writelines( docname + ' BOM\n')
-                    output.writelines('Display Name, ' + 'Part Number, ' + 'Material, '+ 'Count\n')
+                    output.writelines('Display Name,' + 'Part Number,' + 'Material,'+ 'Count\n')
                     output.writelines(walkThrough(bom))
                     output.close()            
                     
