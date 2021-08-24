@@ -132,7 +132,7 @@ def run(context):
                 
                     # Make sure we have a desing
                     if not design:
-                        ui.messageBox('No active design', 'BOM Export')
+                        ui.messageBox('A Design Must be Active.', 'BOM Export')
                         return
                         
                     # Get all occurrences in the root component of the active design
@@ -177,7 +177,6 @@ def run(context):
                                 'instances': 1,
                                 'sub': occtype,
                             })
-                     
                     # Display the BOM in the console
                     print ('\n')
                     print ( docname + ' BOM\n')
@@ -199,7 +198,7 @@ def run(context):
                     #Write the BOM    
                     output = open(filename, 'w')
                     output.writelines( docname + ' BOM\n')
-                    output.writelines('Display Name, ' + 'Part Number, ' + 'Material, '+ 'Count,' + 'UOM\n')
+                    output.writelines('Display Name,' + 'Part Number,' + 'Material,'+ 'Count\n')
                     output.writelines(walkThrough(bom))
                     output.close()            
                     
@@ -246,7 +245,7 @@ def run(context):
         workspaces_ = ui.workspaces
         modelingWorkspace_ = workspaces_.itemById('FusionSolidEnvironment')
         toolbarPanels_ = modelingWorkspace_.toolbarPanels
-        toolbarPanel_ = toolbarPanels_.item(0) # add the new command under the first panel
+        toolbarPanel_ = toolbarPanels_.itemById('SolidCreatePanel') # add the new command under the second panel
         toolbarControlsPanel_ = toolbarPanel_.controls
         toolbarControlPanel_ = toolbarControlsPanel_.itemById(commandIdOnPanel)
         if not toolbarControlPanel_:
